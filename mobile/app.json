@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "PAA",
+    "slug": "paa-assistant",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "paa",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.paa.assistant",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "PAA needs microphone access to listen to your voice commands and wake phrases."
+      }
+    },
+    "android": {
+      "package": "com.paa.assistant",
+      "adaptiveIcon": {
+        "backgroundColor": "#121212",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.INTERNET"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow PAA to access your microphone for voice commands."
+        }
+      ]
+    ],
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "defaultBackendUrl": "http://10.0.2.2:3000",
+      "defaultSharedSecret": "paa-dev-secret"
+    }
+  }
+}
